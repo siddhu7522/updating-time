@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time updating</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+    <span id="siddhu"></span>
+    <script>
+        function getTime(){
+            var today=new Date();
+            var hours=today.getHours();
+            var minutes=today.getMinutes();
+            var seconds=today.getSeconds();
+            document.getElementById('siddhu').innerHTML=hours+":"+minutes+":"+seconds;
+            setInterval(getTime,1000);
+        }
+        getTime()
+    </script>
+</body>
+</html>
